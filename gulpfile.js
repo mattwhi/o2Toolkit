@@ -40,6 +40,15 @@ gulp.task('sass', function() {
     .pipe(livereload());
 });
 
+gulp.task('scripts', function() {
+
+    gulp.src('./dev/modules/**/*directive.js')
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('build/assets/js/'));
+
+    
+});
+
 
 
 // copy files
@@ -70,6 +79,8 @@ gulp.task('copyFiles', function() {
         gulp.src(['./dev/assets/img/**'])    
     .pipe(gulp.dest('build/assets/img/'))
 
+     
+
     .pipe(notify({ message: 'All files task complete' }));  
 
 });
@@ -79,7 +90,7 @@ gulp.task('copyFiles', function() {
 // Watch
 gulp.task('watch', function() {
   // Watch .scss files
-  gulp.watch(['dev/assets/scss/**','dev/index.html','dev/modules/**/**','dev/assets/js/*'], ['sass','copyFiles']);
+  gulp.watch(['dev/assets/scss/**','dev/index.html','dev/modules/**/**','dev/assets/js/*'], ['sass','copyFiles','scripts']);
 
   nodemon({
     // the script to run the app
@@ -99,7 +110,7 @@ gulp.task('watch', function() {
 
 gulp.task('default', function(callback) {
   runSequence('clean',
-              ['sass','copyFiles','watch'])
+              ['sass','copyFiles','scripts','watch'])
 });
 
 

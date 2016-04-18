@@ -2,7 +2,20 @@
 	"modules":[
 	    {
 		    "name":"Promo M",
-		    "url":"promoM"
+		    "url":"promoM/index.html",
+		    "component":[
+		    	{
+		    		"title":"Loren ipsum",
+		    		"copy":"This is copy",
+		    		"cta":"This is  CTA link",
+		    		"ctaUrl":"google.com",
+		    		"extraClass":"diagonal",
+		    		"bp1":"",
+		    		"dd":"",
+		    		"bp2":"",
+		    		"bp3":""
+		    	}
+		    ]
 		}
 	]
 }
