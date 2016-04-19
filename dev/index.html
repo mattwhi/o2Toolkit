@@ -43,15 +43,40 @@
     </div> 
    </div>
 
-
+<div class="grid">
+<div class="grid-row">
+<div class="default-content-container">
 <ul>
   <li><a ui-sref="promoM">Promo M</a></li>
   <li><a ui-sref="promoS">Promo S</a></li>
 </ul>
-  
+</div>
+</div>
+
+<div class="grid-row">
+<div class="default-content-container">
+<div class="module label-xxl"><h2>Select you module</h2>
+<div class="line"></div>
+</div>
+</div>
+</div>
+
+<div class="grid-row">
+<div class="default-content-container">
+<div ng-controller="MainController">
+  <select ng-model="tt" ng-options="opt.value as opt.label for opt in options">
+  </select>
+</div>
+</div>
+</div>
+
+<div class="grid-row">
+<div class="default-content-container">
 <div ui-view></div>
+</div>
+</div>
 
-
+</div>
 <div ng-include="'../templates/footer.html'"></div>
 
 <!-- Third-party Libraries -->
@@ -62,5 +87,6 @@
 <!-- Application Code -->
 <script src="/assets/js/app.js"></script>
 <script src="/assets/js/all.js"></script>
+<script src="/assets/js/MyController.js"></script>
 </body>
 </html>

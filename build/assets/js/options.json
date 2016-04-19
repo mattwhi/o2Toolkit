@@ -1,0 +1,13 @@
+{
+	"modules":
+	[
+		{
+			"label" : "promoM",
+			"value" : "promoM"
+		},
+		{
+			"label" : "promoS",
+			"value" : "promoS"
+		}
+	]
+}
